@@ -1,8 +1,11 @@
 const express = require('express');
 const helmet = require('helmet')
+const knex = require('knex');
+
+const knexConfig = require('./knexfile.js');
 
 const cohortsRouter = require('../cohorts/cohorts-router.js')
-const studentsRouter = require('../student/students-router.js')
+const studentsRouter = require('../students/students-router.js')
 
 const server = express();
 
