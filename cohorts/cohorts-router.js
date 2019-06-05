@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
       const cohortStudents = req.params.id;
       db
         .from('students')
-        .where({ cohort_id: `${cohortStudents}`})
+        .where({ cohort_id: `${cohortStudents}`}) 
         .then(students => {
             res.status(200).json(students)
         })
